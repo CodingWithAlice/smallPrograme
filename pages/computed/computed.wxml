@@ -1,0 +1,46 @@
+
+<view class="page-body">
+    <view class="title">
+        请输入:
+        <view class="input">
+            宽：<input class="input-in" type="number" data-model="width" bindinput="inputWacth"/>m
+        </view>
+        <view class="input">
+            高：<input class="input-in" type="number" data-model="height" bindinput="inputWacth"/>m
+        </view>
+        <view class="input">
+            侧：<input class="input-in" type="number" data-model="ce" bindinput="inputWacth"/>m
+        </view>
+        <view class="input">
+            铝膜单价：<input class="input-in" type="number" data-model="lvPrice" bindinput="inputWacth"/>元
+        </view>
+        <view class="input">
+            珍珠棉单价：<input class="input-in" type="number" data-model="zhenPrice" bindinput="inputWacth"/>元
+        </view>
+        <view class="input">
+            铝膜工资：<input class="input-in" type="number" data-model="lvEarning" bindinput="inputWacth"/>元
+        </view>
+        <view class="input">
+            珍珠棉工资：<input class="input-in" type="number" data-model="zhenEarning" bindinput="inputWacth"/>元
+        </view>
+        <view class="input">
+            手提成本：<input class="input-in" type="number" data-model="getByOwn" bindinput="inputWacth"/>元
+        </view>
+    </view>
+
+    <view class="btn" bindtap="compute">开始计算</view>
+    <view class="title">
+        输出结果:
+        <view class="ouput">
+            面积为
+            <view class="show">{{area}}</view>
+            平方米
+        </view>
+        <view class="ouput">
+            手提袋单价为
+            <view class="show">{{price}}</view>
+            元
+        </view>
+    </view>
+  
+</view>
