@@ -1,46 +1,59 @@
+<view class="main">
+  <!-- 公共头部 -->
+  <myTitle></myTitle>
+  <!-- 首页导航模块 -->
+  <view class="nav_wrap">
+    <!-- 自己滚动区域的组件 -->
+    <scroll-view class="nav" scroll-x>
+      <view
+          bindtap='activeNav'
+          data-index="{{index}}"
+          class="nav_item {{index===currentIndexNav?'active':''}}"
+          wx:for="{{navList}}"
+          wx:key="{{index}}">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="slides">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+        <navigator>
+          <image mode="widthFix" src="{{item.imgSrc}}">
 
-<view class="page-body">
-    <view class="title">
-        请输入:
-        <view class="input">
-            宽：<input class="input-in" type="number" data-model="width" bindinput="inputWacth"/>m
+          </image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 视频列表 -->
+  <view class="video_wrap">
+    <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+      <!-- 图片容器 -->
+      <view class="video_image">
+        <!-- 图片 -->
+        <image mode="widthFix" src="{{item.imgSrc}}" ></image>
+        <!-- 播放量 评论量 -->
+        <view class="video_info">
+            <!-- 播放量 -->
+            <view class="play_count">
+                <!-- 图标 -->
+                <text class="iconfont icon-liulan"></text>
+                <!-- 数值 -->
+                <text class="playcount">{{item.playCount}}</text>
+            </view>
+            <!-- 评论量 -->
+            <view class="comment_count">
+                <!-- 图标 -->
+                <text class="iconfont icon-bofang"></text>
+                <!-- 数值 -->
+                <text class="playcount">{{item.commentCount}}</text>
+            </view>
         </view>
-        <view class="input">
-            高：<input class="input-in" type="number" data-model="height" bindinput="inputWacth"/>m
-        </view>
-        <view class="input">
-            侧：<input class="input-in" type="number" data-model="ce" bindinput="inputWacth"/>m
-        </view>
-        <view class="input">
-            铝膜单价：<input class="input-in" type="number" data-model="lvPrice" bindinput="inputWacth"/>元
-        </view>
-        <view class="input">
-            珍珠棉单价：<input class="input-in" type="number" data-model="zhenPrice" bindinput="inputWacth"/>元
-        </view>
-        <view class="input">
-            铝膜工资：<input class="input-in" type="number" data-model="lvEarning" bindinput="inputWacth"/>元
-        </view>
-        <view class="input">
-            珍珠棉工资：<input class="input-in" type="number" data-model="zhenEarning" bindinput="inputWacth"/>元
-        </view>
-        <view class="input">
-            手提成本：<input class="input-in" type="number" data-model="getByOwn" bindinput="inputWacth"/>元
-        </view>
-    </view>
-
-    <view class="btn" bindtap="compute">开始计算</view>
-    <view class="title">
-        输出结果:
-        <view class="ouput">
-            面积为
-            <view class="show">{{area}}</view>
-            平方米
-        </view>
-        <view class="ouput">
-            手提袋单价为
-            <view class="show">{{price}}</view>
-            元
-        </view>
-    </view>
-  
+      </view>
+      <!-- 标题 -->
+      <view class="video_title">{{item.desc}}</view>
+    </navigator>
+  </view>
 </view>
