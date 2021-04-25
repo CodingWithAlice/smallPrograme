@@ -19,16 +19,22 @@
     background-color: #eee;
 }
 .ouput, .input {
-    font-size: 30rpx;
+    font-size: 35rpx;
     display: flex;
+    align-items: center;
 }
 .show {
     color: red;
+    font-weight: 700;
     border: 1px solid red;
-    min-height: 40rpx;
+    font-size: 55rpx;
+    height: 80rpx;
     width: 200rpx;
 }
 
 .input-in {
     border: 1px solid #ccc;
+    height: 70rpx;
+    font-size: 50rpx;
+    width: 350rpx;
 }

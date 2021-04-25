@@ -18,7 +18,7 @@ Page({
         this.data.inputData[item] = +e.detail.value;
     },
     compute() {
-        let area = (this.data.inputData.width + this.data.inputData.ce + 0.04) * (2 * this.data.inputData.height + this.data.inputData.ce + 0.11);
+        let area = (this.data.inputData.width + this.data.inputData.ce + 4) * (2 * this.data.inputData.height + this.data.inputData.ce + 11) / 10000;
         let price = area * (this.data.inputData.lvPrice + this.data.inputData.zhenPrice) + this.data.inputData.lvEarning + this.data.inputData.zhenEarning + this.data.inputData.getByOwn;
         area = (+area).toFixed(2);
         price = (+price).toFixed(2);

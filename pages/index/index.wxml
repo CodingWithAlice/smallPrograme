@@ -3,13 +3,13 @@
     <view class="title">
         请输入:
         <view class="input">
-            宽：<input class="input-in" type="digit" data-model="width" bindinput="inputWacth"/>m
+            宽：<input class="input-in" type="digit" data-model="width" bindinput="inputWacth"/>厘米
         </view>
         <view class="input">
-            高：<input class="input-in" type="digit" data-model="height" bindinput="inputWacth"/>m
+            高：<input class="input-in" type="digit" data-model="height" bindinput="inputWacth"/>厘米
         </view>
         <view class="input">
-            侧：<input class="input-in" type="digit" data-model="ce" bindinput="inputWacth"/>m
+            侧：<input class="input-in" type="digit" data-model="ce" bindinput="inputWacth"/>厘米
         </view>
         <view class="input">
             铝膜单价：<input class="input-in" type="digit" data-model="lvPrice" bindinput="inputWacth"/>元
